@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Grocery Product List</h1>
+
+    <script>
+        let Products = [ "Apple", "Banana", "Carrot", "Dates", "Eggplant" ];
+        let Prices = [ 150, 50, 40, 200, 20 ];
+        let Productlist = [];
+        for (let i=0; i< Products.length; i++){
+            Productlist.push("Product: " + Products[i] + " - $" + "Price" + Prices[i]);
+        }
+        document.write("<h2>Product List</h2>");
+        for (let i=0; i< Productlist.length; i++){
+            document.write("<p>" + Productlist[i] + "</p>");
+        }
+
+        document.write("<h2>Product with Price Greater than 50</h2>");
+        for(let i=0; i<Prices.length; i++){
+            if(Prices[i]>50){
+                document.write("<p>" + Productlist[i] + "</p>");
+                
+            }
+        }
+
+        Products.push("Watermelon");
+        Prices.push(80);
+        let updatedProductList = [];
+        for (let i=0; i< Products.length; i++){
+            updatedProductList.push("Product: " + Products[i] + " - $" + "Price" + Prices[i]);
+        }
+        document.write("<h2>Updated Product List</h2>");
+        for (let i=0; i< updatedProductList.length; i++){
+            document.write("<p>" + updatedProductList[i] + "</p>");
+        }
+    </script>
+    
+
+</body>
+</html>
