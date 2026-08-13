@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator For Grocery Store</title>
+</head>
+<body>
+    <h1>Calculator For Grocery Store</h1>
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            let code =Number(prompt("Enter the code of the product (1-3):"));
+            let quantity =Number(prompt("Enter the quantity of the product:"));
+            let productName;
+            let price;
+            let totalPrice;
+            switch (code) {
+                case 1:
+                    productName = "Apple"
+                    price = 200;
+                    break;
+                case 2:
+                    productName = "Banana"
+                    price = 100;
+                    break;
+                case 3:
+                    productName = "Mango"  
+                    price = 300;
+                    break;
+                default :
+                    alert("Invalid product code. Please enter a code.");
+                    continue;
+            }
+             
+            totalPrice = quantity * price;
+
+            document.write("<h2>Purchase: " + i + "</h2>");
+            document.write("<p>Product Name: " + productName + "</p>");
+            document.write("<p>Quantity: " + quantity + "</p>");
+            document.write("<p>Price per Item: " + price + "</p>");  
+            document.write("<p>Total Price: " + totalPrice + "</p>");
+
+            if(totalPrice > 100){
+                document.write("High Purchase<br>");
+            } else {
+                document.write("Low Purchase<br>");
+            }
+        }
+    </script>
+</body>
+</html>
