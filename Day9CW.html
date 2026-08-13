@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment System</title>
+</head>
+<body>
+
+    <h2>Comment System</h2><br>
+    <script>
+        function checkComment(comment) {
+            let numberfound = /\d/.test(comment);
+            let updatedComment = comment.replace(/\d+/g, "NUMBER");
+            return {
+                numberfound: numberfound,
+                updatedComment: updatedComment
+            };
+        }
+
+            let comment = ("My son is 12 years old. Our flat number is 45 and contact is 9876543210.");
+            let result = checkComment(comment);
+
+            document.write("Number found: " + result.numberfound + "<br><br>");
+            document.write("Updated Comment: " + result.updatedComment + "<br>");
+        
+    </script>
+</body>
+</html>
