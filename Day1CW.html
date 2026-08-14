@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Sales</title>
+</head>
+<body>
+    <h2>Store Sales</h2><br>
+    <script>
+        let tshirtquantity = 5;
+        let capquantity = 3;
+        let tshirtprice = 400;
+        let capprice = 150;
+
+        let totalearnings = (tshirtquantity * tshirtprice) + (capquantity * capprice);
+        document.write("Total Earnings: " + totalearnings);
+
+        tshirtprice = 450;
+        totalearnings = (tshirtquantity * tshirtprice) + (capquantity * capprice);
+        document.write("<br><br>Updated Total Earnings: " + totalearnings);
+    </script>
+</body>
+</html>
