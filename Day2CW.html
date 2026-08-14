@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+</head>
+<body>
+    <h2>Library System</h2><br>
+    <script>
+        let book = {
+            title: "The Great Gatsby",
+            author: "F. Scott Fitzgerald",
+            year: 1925,
+
+            getsummary: function() {
+                return "The book '" + this.title + "' was written by " + this.author + " in " + this.year + ".";
+            }
+        };
+
+        function printBookSummary(bookObj) {
+            document.write(bookObj.getsummary());
+        }
+
+        printBookSummary(book);
+
+    </script>
+</body>
+</html>
