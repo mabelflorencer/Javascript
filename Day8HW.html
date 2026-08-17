@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+</head>
+<body>
+    <h1>Guess the Number</h1>
+
+    <button onclick="startGame()">Start Game</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function startGame() {
+
+            for (let chance = 1; chance <= 5; chance++) {
+
+                let guess = Number(prompt("Enter a number between 1 and 5:"));
+
+                if (guess < 1 || guess > 5 || isNaN(guess)) {
+                    alert("Invalid input");
+                    continue;
+                }
+
+                let numberWord;
+
+                switch (guess) {
+                    case 1:
+                        numberWord = "One";
+                        break;
+
+                    case 2:
+                        numberWord = "Two";
+                        break;
+
+                    case 3:
+                        numberWord = "Three";
+                        break;
+
+                    case 4:
+                        numberWord = "Four";
+                        break;
+
+                    case 5:
+                        numberWord = "Five";
+                        break;
+                }
+
+                console.log("You entered: " + numberWord);
+
+                if (guess === 3) {
+                    alert("You guessed it right!");
+                    break;
+                } else {
+                    alert("Wrong guess. Try again.");
+                }
+
+                if (chance === 5) {
+                    alert("Game over");
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
