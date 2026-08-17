@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile</h1>
+
+    <button onclick="checkAccess()">Check Access</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        let user = {
+            name: "Mabel",
+            age: 22,
+            admin: true
+        };
+
+        function checkAccess() {
+
+            let ageExists = "age" in user;
+            console.log("Does age exist?", ageExists);
+
+            let access = (user.age >= 18 && user.admin)
+                ? "Access Granted"
+                : "Access Denied";
+            document.getElementById("result").innerHTML = access;
+
+            delete user.age;
+            console.log("User after deleting age:", user);
+        }
+
+    </script>
+</body>
+</html>
