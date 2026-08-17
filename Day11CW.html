@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
+</head>
+<body>
+    <h2>Book Information</h2>
+    <script>
+        class Book {
+            constructor(title, author, price) {
+                this.title = title;
+                this.author = author;
+                this.price = price;
+            }
+            get booktitle(){
+                return this.title;
+            }
+            get authorname() {
+                return this.author;
+            }
+            set bookprice(newprice) {
+                if (typeof newprice =="number" && newprice > 0) {
+                    this.price = newprice;
+                } else {
+                    console.log("Invalid price. Please enter a positive number.");
+                }
+            }
+        }
+
+        let book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 10.99);
+        book1.bookprice = 150;
+        
+
+        console.log("Book Title: " + book1.booktitle);
+        console.log("Author: " + book1.authorname);
+        console.log("Price: " + book1.price);
+    </script>>
+</body>
+</html>
