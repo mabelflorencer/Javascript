@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Color</title>
+    <style>
+        message { color:blue;}
+    </style>
+</head>
+<body>
+    <h1>Text Color</h1>
+    <form id="my form">
+        <input type="text" id="user-text" placeholder="Enter a text">
+        <button type="submit">Change Color</button>
+    </form>
+    <p id="message"></p>
+
+    <script>
+        let form = document.getElementById("my form");
+        let input = document.getElementById("user-text");
+        let message = document.getElementById("message");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            message.textContent = input.value;
+            message.style.color = "blue";
+
+        });
+
+        message.addEventListener("mouseover", function() {
+
+            message.style.color = "green";
+
+        });
+
+        message.addEventListener("mouseout", function() {
+
+            message.style.color = "blue";
+
+        });
+    </script>
+</body>
+</html>
